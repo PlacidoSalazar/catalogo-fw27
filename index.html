@@ -1,81 +1,67 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Lola Casademunt · Maite Casademunt — FW 27/28</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{height:100%;background:#E9E6E1}
-body{font-family:Manrope,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-main{height:100vh;overflow-y:auto;scroll-snap-type:y mandatory;scrollbar-width:none}
-main::-webkit-scrollbar{display:none}
-.slide{height:100vh;scroll-snap-align:start;scroll-snap-stop:always;display:grid;place-items:center}
-.slide>div{position:relative;container-type:size;box-shadow:0 30px 60px -30px rgba(40,30,20,.25)}
-.spread{aspect-ratio:1680/1188;height:min(82vh,calc(86vw*1188/1680))}
-.page{aspect-ratio:840/1188;height:82vh}
-img{width:100%;height:100%;display:block;object-fit:cover}
-.sep{position:absolute;inset:0;color:#fff}
-.verse{position:absolute;left:75.5%;top:34.7%;font-size:1.18cqh;line-height:1.3;display:flex;flex-direction:column;white-space:nowrap}
-.verse.dim span{color:rgba(255,255,255,.75)}
-.verse b{font-weight:400;margin-top:1.3em}
-.fl,.fr{position:absolute;bottom:6.6%;font-style:normal;font-size:.68cqh;letter-spacing:.04em;text-transform:uppercase}
-.fl{left:4.4%}.fr{right:4.4%;opacity:.7}
-nav{position:fixed;right:24px;bottom:20px;font:500 11px Manrope,sans-serif;letter-spacing:.08em;color:#6b645c}
+html,body{height:100%;overflow:hidden;background:#000;overscroll-behavior:none}
+#t{height:100%;transition:transform .9s cubic-bezier(.77,0,.18,1);will-change:transform}
+section{height:100vh;height:100dvh;overflow:hidden;position:relative}
+img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;user-select:none;-webkit-user-drag:none}
 </style></head><body>
-<main id="m">
-<section class="slide"><div class="page"><img src="img/01.webp" alt="" ></div></section>
-<section class="slide"><div class="spread"><div class="sep" style="background:#675542"><div class="verse dim"><span>Mirar más allá.</span><span>Encontrar inspiración en cada detalle.</span><span>Celebrar todas las formas de ser.</span><span>Porque el asombro no se busca: se aprende a ver.</span><b>The Art of Wonder</b></div></div></div></section>
-<section class="slide"><div class="spread"><img src="img/03.webp" alt="" ></div></section>
-<section class="slide"><div class="spread"><img src="img/04.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><div class="sep" style="background:#715038"><div class="verse"><span>El asombro no está en lo que vemos.</span><span>Está en cómo decidimos mirarlo.</span><span>Mirar dos veces ya es crear.</span></div></div></div></section>
-<section class="slide"><div class="spread"><img src="img/06.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><img src="img/07.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><img src="img/08.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><img src="img/09.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><div class="sep" style="background:#6B463D"><div class="verse"><span>Un gesto. Una pausa.</span><span>Lo pequeño guarda lo extraordinario.</span><span>Basta con detenerse.</span></div></div></div></section>
-<section class="slide"><div class="spread"><img src="img/11.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><img src="img/12.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><img src="img/13.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><img src="img/14.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><div class="sep" style="background:#713838"><div class="verse"><span>Lo heredado aprende a jugar.</span><span>Las reglas, para saber romperlas.</span><span>La imaginación no pide permiso.</span></div></div></div></section>
-<section class="slide"><div class="spread"><img src="img/16.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><img src="img/17.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><img src="img/18.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><img src="img/19.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><div class="sep" style="background:#6A3E46"><div class="verse"><span>Ser una y ser muchas.</span><span>Cambiar de ritmo sin perder la voz.</span><span>Todas, a la vez.</span></div></div></div></section>
-<section class="slide"><div class="spread"><img src="img/21.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><img src="img/22.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><div class="sep" style="background:#71384A"><div class="verse dim"><span>Texto provisional, primer verso.</span><span>Texto provisional, segundo verso.</span><span>Texto provisional, tercer verso.</span><b>Accesorios</b></div></div></div></section>
-<section class="slide"><div class="spread"><img src="img/24.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><img src="img/25.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><div class="sep" style="background:#414868"><div class="verse dim"><span>Una casa sin paredes.</span><span>Cada habitación, un sueño distinto.</span><span>Aquí no se viaja: se imagina.</span><span>Vestirse es soñar despierta.</span><b>Maison des Rêves</b></div></div></div></section>
-<section class="slide"><div class="spread"><img src="img/27.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><img src="img/28.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><img src="img/29.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><div class="sep" style="background:#384A71"><div class="verse"><span>Afuera, el mundo se detiene.</span><span>Dentro, el tiempo es nuestro.</span><span>Cerrar los ojos y quedarse.</span></div></div></div></section>
-<section class="slide"><div class="spread"><img src="img/31.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><img src="img/32.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><img src="img/33.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><img src="img/34.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><img src="img/35.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><div class="sep" style="background:#425E67"><div class="verse"><span>Abrir las ventanas al sueño.</span><span>Dejar que la noche dure un poco más.</span><span>Despertar sin dejar de soñar.</span></div></div></div></section>
-<section class="slide"><div class="spread"><img src="img/37.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><img src="img/38.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><div class="sep" style="background:#2A2F45"><div class="verse dim"><span>Texto provisional, primer verso.</span><span>Texto provisional, segundo verso.</span><span>Texto provisional, tercer verso.</span><b>Accesorios</b></div></div></div></section>
-<section class="slide"><div class="spread"><img src="img/40.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="spread"><img src="img/41.webp" alt="" loading="lazy"></div></section>
-<section class="slide"><div class="page"><img src="img/42.webp" alt="" loading="lazy"></div></section>
-</main>
-<nav id="n"></nav>
+<div id="t">
+<section style="background:#000000"><img src="img/01.webp" alt=""></section>
+<section style="background:#f6f6f6"><img src="img/02.webp" alt=""></section>
+<section style="background:#ffffff"><img src="img/03.webp" alt=""></section>
+<section style="background:#ffffff"><img src="img/04.webp" alt="" loading=lazy></section>
+<section style="background:#725037"><img src="img/05.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/06.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/07.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/08.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/09.webp" alt="" loading=lazy></section>
+<section style="background:#6b463e"><img src="img/10.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/11.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/12.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/13.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/14.webp" alt="" loading=lazy></section>
+<section style="background:#8e9b69"><img src="img/15.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/16.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/17.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/18.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/19.webp" alt="" loading=lazy></section>
+<section style="background:#de5047"><img src="img/20.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/21.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/22.webp" alt="" loading=lazy></section>
+<section style="background:#713748"><img src="img/23.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/24.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/25.webp" alt="" loading=lazy></section>
+<section style="background:#414868"><img src="img/26.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/27.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/28.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/29.webp" alt="" loading=lazy></section>
+<section style="background:#384a72"><img src="img/30.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/31.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/32.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/33.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/34.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/35.webp" alt="" loading=lazy></section>
+<section style="background:#435f67"><img src="img/36.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/37.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/38.webp" alt="" loading=lazy></section>
+<section style="background:#292f44"><img src="img/39.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/40.webp" alt="" loading=lazy></section>
+<section style="background:#ffffff"><img src="img/41.webp" alt="" loading=lazy></section>
+<section style="background:#000000"><img src="img/42.webp" alt="" loading=lazy></section>
+</div>
 <script>
-const m=document.getElementById('m'),s=[...document.querySelectorAll('.slide')],n=document.getElementById('n');
-const cur=()=>Math.round(m.scrollTop/innerHeight);
-const upd=()=>n.textContent=String(cur()+1).padStart(2,'0')+' / '+s.length;
-m.addEventListener('scroll',upd,{passive:true});upd();
-const go=i=>s[Math.max(0,Math.min(s.length-1,i))].scrollIntoView({behavior:'smooth'});
-addEventListener('keydown',e=>{
- if(['ArrowDown','ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();go(cur()+1)}
- if(['ArrowUp','ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();go(cur()-1)}
- if(e.key==='Home')go(0); if(e.key==='End')go(s.length-1);
- if(e.key==='f')document.documentElement.requestFullscreen?.();
-});
+const t=document.getElementById('t'),n=t.children.length;let i=0,lock=false;
+const go=k=>{k=Math.max(0,Math.min(n-1,k));if(k===i)return;i=k;lock=true;t.style.transform=`translateY(${-i*100}%)`;t.style.transform=`translateY(${-i*innerHeight}px)`;setTimeout(()=>lock=false,1000);};
+addEventListener('wheel',e=>{e.preventDefault();if(lock||Math.abs(e.deltaY)<8)return;go(i+(e.deltaY>0?1:-1));},{passive:false});
+let y0=null;addEventListener('touchstart',e=>y0=e.touches[0].clientY,{passive:true});
+addEventListener('touchmove',e=>e.preventDefault(),{passive:false});
+addEventListener('touchend',e=>{if(y0===null||lock)return;const d=y0-e.changedTouches[0].clientY;if(Math.abs(d)>40)go(i+(d>0?1:-1));y0=null;});
+addEventListener('keydown',e=>{if(['ArrowDown','ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();lock||go(i+1)}
+ if(['ArrowUp','ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();lock||go(i-1)}
+ if(e.key==='Home')go(0);if(e.key==='End')go(n-1);
+ if(e.key==='f')document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();});
+addEventListener('resize',()=>{t.style.transition='none';t.style.transform=`translateY(${-i*innerHeight}px)`;requestAnimationFrame(()=>t.style.transition='')});
 </script></body></html>
