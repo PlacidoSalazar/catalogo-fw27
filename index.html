@@ -20,10 +20,10 @@ section{height:100vh;height:100dvh;overflow:hidden;position:relative}
 .cur{display:inline-block;width:1px;height:1.15em;margin-left:.08em;vertical-align:-.2em;background:#1a1a1a;animation:blink .9s steps(1) infinite}
 .cur.out{animation:none;opacity:0;transition:opacity .8s ease .6s}
 @keyframes blink{50%{opacity:0}}
-/* Imágenes: revelado como una exposición — aparecen y se asientan con la misma curva que las letras */
-section img,section video{opacity:0;transform:scale(1.045);will-change:opacity,transform}
-section.act img,section.act video{opacity:1;transform:scale(1);transition:opacity .9s var(--ease) .1s,transform 1.6s var(--ease) .1s}
-@media (prefers-reduced-motion:reduce){section img,section video{opacity:1;transform:none}.tx .ch{opacity:1;filter:none;transform:none;letter-spacing:0}.cur{display:none}}
+/* Imágenes: fundido suave, misma curva que las letras */
+section img,section video{opacity:0;will-change:opacity;backface-visibility:hidden}
+section.act img,section.act video{opacity:1;transition:opacity .9s var(--ease) .1s}
+@media (prefers-reduced-motion:reduce){section img,section video{opacity:1}.tx .ch{opacity:1;filter:none;transform:none;letter-spacing:0}.cur{display:none}}
 img.c{object-fit:cover}
 video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;user-select:none;-webkit-user-drag:none}
