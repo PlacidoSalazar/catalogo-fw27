@@ -94,21 +94,23 @@ const activate=k=>{if(k===cur)return;const prev=cur;cur=k;load(k);vids(k);S[k].c
  S.forEach((s,j)=>{if(j!==k&&j!==prev){s.classList.remove('act');hush(s)}});
  if(prev>=0)setTimeout(()=>{if(cur!==prev){S[prev].classList.remove('act');hush(S[prev])}},1300)};
 /* scroll: Lenis con paso por página — un gesto, una página (como YSL) */
-let moving=false,queued=0,lastT=0,lastD=0,lastFire=0,tY=null;
+let moving=false,lastT=0,hist=[],tY=null;
 const DUR=.95;
 const lenis=new Lenis({duration:DUR,easing:ease,smoothWheel:true,
  virtualScroll:({deltaY,event})=>{
   if(event.cancelable)event.preventDefault(); // bloquea el scroll nativo: solo manda el paso por página
-  if(event.type==='wheel'){const now=performance.now(),d=Math.abs(deltaY),gap=now-lastT;
-   // intención: pausa corta, o un empujón que crece sobre la inercia que va decayendo
-   const fresh=gap>90||(now-lastFire>320&&d>6&&d>lastD*1.4);lastT=now;lastD=gap>90?d:Math.max(d,lastD*.85);
-   if(fresh&&d>2){lastFire=now;const dir=deltaY>0?1:-1;if(moving)queued=dir;else to(cur+dir)}}
+  if(event.type==='wheel'){const now=performance.now(),d=Math.abs(deltaY),gap=now-lastT;lastT=now;
+   if(gap>220)hist=[];               // tras una pausa real empieza un gesto nuevo
+   const avg=hist.length?hist.reduce((x,y)=>x+y,0)/hist.length:0;
+   hist.push(d);if(hist.length>6)hist.shift();
+   // dispara solo al inicio de un gesto, o con un empujón claro sobre la inercia ya terminada la transición
+   const start=hist.length===1, push=hist.length>=6&&d>20&&d>avg*2.2;
+   if(!moving&&d>2&&(start||push)){hist=[d];to(cur+(deltaY>0?1:-1))}}
   return false}});
 lenis.on('scroll',({scroll})=>activate(Math.min(n-1,Math.max(0,Math.round(scroll/innerHeight)))));
 const raf=t=>{lenis.raf(t);requestAnimationFrame(raf)};requestAnimationFrame(raf);
-const to=k=>{k=Math.max(0,Math.min(n-1,k));if(k===cur&&!moving)return;moving=true;queued=0;
- lenis.scrollTo(k*innerHeight,{duration:DUR,easing:ease,force:true,onComplete:()=>{moving=false;if(queued){const q=queued;queued=0;to(cur+q)}}});
- setTimeout(()=>{moving=false},DUR*700)}; // acepta el siguiente gesto antes de aterrizar
+const to=k=>{k=Math.max(0,Math.min(n-1,k));if(k===cur&&!moving)return;moving=true;
+ lenis.scrollTo(k*innerHeight,{duration:DUR,easing:ease,force:true,onComplete:()=>{moving=false}})};
 addEventListener('wheel',e=>e.preventDefault(),{passive:false});
 addEventListener('touchstart',e=>tY=e.touches[0].clientY,{passive:true});
 addEventListener('touchmove',e=>e.preventDefault(),{passive:false});
